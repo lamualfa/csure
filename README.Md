@@ -17,6 +17,23 @@ pnpm dev
 
 Preset value.
 
+#### Presets
+
+```js
+const presets = {
+  keys: {
+    // key: [CSS Attributes or properties, group values]
+    mt: ['margin-top', 'spacing'],
+    pr: ['padding-right', 'spacing'],
+  },
+  values: {
+    spacing: (val) => {
+      return `${parseInt(val) * 0.25}rem`;
+    },
+  },
+};
+```
+
 #### Class Name
 
 ```
@@ -83,24 +100,7 @@ pr-3 hover:md(text-lg pt-1) =sm(bg-green.200)
 
 ### Example 3
 
-Dynamic value.
-
-#### Presets
-
-```js
-const presets = {
-  keys: {
-    // key: [CSS Attributes or properties, group values]
-    mt: ['margin-top', 'spacing'],
-    pr: ['padding-right', 'spacing'],
-  },
-  values: {
-    spacing: (val) => {
-      return `${parseInt(val) * 0.25}rem`;
-    },
-  },
-};
-```
+Dynamic value. No presets needed.
 
 #### Class Name
 
