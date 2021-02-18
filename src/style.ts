@@ -1,0 +1,10 @@
+export type ClassName = string;
+export type RawSelector = string;
+export type RawVal = string;
+export type Selector = string;
+export type Prop = string;
+export type Val = string;
+export type Rule = [Prop, Val];
+export type Rules = [Rule];
+export type Style = Record<Selector, Rules>;
+export type Styles = [Style];
