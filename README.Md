@@ -85,13 +85,28 @@ pr-3 hover:md(text-lg pt-1) =sm(bg-green.200)
 
 Dynamic value.
 
+#### Presets
+
+```js
+const presets = {
+  keys: {
+    // key: [CSS Attributes or properties, group values]
+    mt: ['margin-top', 'spacing'],
+    pr: ['padding-right', 'spacing'],
+  },
+  values: {
+    spacing: (val) => {
+      return `${parseInt(val) * 0.25}rem`;
+    },
+  },
+};
+```
+
 #### Class Name
 
 ```
 -mt-5rem p-10rem bg-#fff
 ```
-
-> `pr-1` will be override with `pr-3`
 
 #### Result
 
