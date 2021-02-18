@@ -15,6 +15,8 @@ pnpm dev
 
 ### Example 1
 
+Preset value.
+
 #### Class Name
 
 ```
@@ -35,7 +37,11 @@ pnpm dev
 }
 ```
 
+<hr/>
+
 ### Example 2
+
+Variants grouping.
 
 #### Class Name
 
@@ -72,3 +78,33 @@ pr-3 hover:md(text-lg pt-1) =sm(bg-green.200)
 ```
 
 > In production, `=sm(bg-green.200)` will replace by short unique identifier like `aaa`, `aab`, `aac`, etc.
+
+<hr/>
+
+### Example 3
+
+Dynamic value.
+
+#### Class Name
+
+```
+-mt-5rem p-10rem bg-#fff
+```
+
+> `pr-1` will be override with `pr-3`
+
+#### Result
+
+```css
+.-mt-5rem {
+  margin-top: -5rem;
+}
+
+.p-10rem {
+  padding: 1rem;
+}
+
+.bg-\#fff {
+  background-color: #fff;
+}
+```
